@@ -8,7 +8,8 @@ A UILabel subclass with mention/hashtag/link highlighting.
 Usage
 =====
 
-Import UIAttributedHighlightLabel.h and UIAttributedHighlightLabel.m to your project. Link it against the CoreText framework.
+Import UIAttributedHighlightLabel.h and UIAttributedHighlightLabel.m to your project. Also link it against the CoreText framework for iOS 5 support.
+IMPORTANT: iOS 5 support not tested yet!
 
     UIAttributedHighlightLabel *tweetLabel = [[UIAttributedHighlightLabel alloc] initWithFrame:CGRectMake(..,..,..,..)];
     tweetLabel.delegate = self;
