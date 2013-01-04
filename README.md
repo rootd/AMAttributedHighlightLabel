@@ -10,22 +10,28 @@ Usage
 
 Import UIAttributedHighlightLabel.h and UIAttributedHighlightLabel.m to your project. Link it against the CoreText framework.
 
-UIAttributedHighlightLabel *tweetLabel = [[UIAttributedHighlightLabel alloc] initWithFrame:CGRectMake(..,..,..,..)];
-tweetLabel.delegate = self;
-tweetLabel.userInteractionEnabled = YES;
-tweetLabel.numberOfLines = 0;
-tweetLabel.lineBreakMode = NSLineBreakByCharWrapping;
-[tweetLabel setString:@"This #is a @test for my #@new http://UIAttributedHighlightLabel.class"];
-[self.view addSubview:tweetLabel];
+    UIAttributedHighlightLabel *tweetLabel = [[UIAttributedHighlightLabel alloc] initWithFrame:CGRectMake(..,..,..,..)];
+    tweetLabel.delegate = self;
+    tweetLabel.userInteractionEnabled = YES;
+    tweetLabel.numberOfLines = 0;
+    tweetLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    [tweetLabel setString:@"This #is a @test for my #@new http://UIAttributedHighlightLabel.class"];
+    
+    tweetLabel.textColor = [UIColor lightGrayColor];
+    tweetLabel.mentionTextColor = [UIColor darkGrayColor];
+    tweetLabel.hashtagTextColor = [UIColor darkGrayColor];
+    tweetLabel.linkTextColor = [UIColor colorWithRed:129.0/255.0 green:171.0/255.0 blue:193.0/255.0 alpha:1.0];
+    tweetLabel.selectedMentionTextColor = [UIColor blackColor];
+    tweetLabel.selectedHashtagTextColor = [UIColor blackColor];
+    tweetLabel.selectedLinkTextColor = UIColorFromRGB(0x4099FF);
 
-Delegate methods (Use UIAttributedHighlightLabelDelegate protocol):
+    [self.view addSubview:tweetLabel];
+    
+Delegate methods (Use <UIAttributedHighlightLabelDelegate> protocol):
 
-- (void)selectedMention:(NSString *)string {
-}
-- (void)selectedHashtag:(NSString *)string {
-}
-- (void)selectedLink:(NSString *)string {
-}
+<code>-(void)selectedMention:(NSString *)string; <br>
+ -(void)selectedHashtag:(NSString *)string; <br>
+ -(void)selectedLink:(NSString *)string;</code>
 
 Look at the sample project so de it more detailed.
 
