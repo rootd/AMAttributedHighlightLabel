@@ -35,6 +35,27 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Initialization code
+        textColor = [UIColor lightGrayColor];
+        mentionTextColor = [UIColor darkGrayColor];
+        hashtagTextColor = [UIColor darkGrayColor];
+        linkTextColor = [UIColor colorWithRed:129.0/255.0 green:171.0/255.0 blue:193.0/255.0 alpha:1.0];
+        
+        selectedMentionTextColor = [UIColor blackColor];
+        selectedHashtagTextColor = [UIColor blackColor];
+        selectedLinkTextColor = UIColorFromRGB(0x4099FF);
+        
+        touchableWords = [[NSMutableArray alloc] init];
+        touchableLocations = [[NSMutableArray alloc] init];
+        touchableWordsRange = [[NSMutableArray alloc] init];
+        self.text = @"";
+    }
+    return self;
+}
+
 - (id)init {
     self = [super init];
     if (self) {
