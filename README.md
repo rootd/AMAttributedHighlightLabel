@@ -34,7 +34,7 @@ Delegate methods (Use <UIAttributedHighlightLabelDelegate> protocol):
  -(void)selectedHashtag:(NSString *)string; <br>
  -(void)selectedLink:(NSString *)string;</code>
 
-Look at the sample project so de it more detailed.
+Look at the sample project ti see it more detailed.
 
 License (MIT)
 =============
