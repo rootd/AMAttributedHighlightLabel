@@ -1,18 +1,18 @@
 //
-//  ViewController.m
-//  UIAttributedHighlightLabelExample
+//  AMViewController.m
+//  AMAttributedHighlightLabelExample
 //
-//  Created by Alexander Meiler on 04.01.13.
+//  Created by Alexander Meiler on 13.01.13.
 //  Copyright (c) 2013 Alexander Meiler. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AMViewController.h"
 
-@interface ViewController ()
+@interface AMViewController ()
 
 @end
 
-@implementation ViewController
+@implementation AMViewController
 
 @synthesize tweetLabel;
 
@@ -23,7 +23,7 @@
     tweetLabel.userInteractionEnabled = YES;
     tweetLabel.numberOfLines = 0;
     tweetLabel.lineBreakMode = NSLineBreakByCharWrapping;
-    [tweetLabel setString:@"This #is a @test for my #@new http://UIAttributedHighlightLabel.class"];
+    [tweetLabel setString:@"This #is a @test for my #@new http://AMAttributedHighlightLabel.class"];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

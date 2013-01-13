@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UIAttributedHighlightLabelExample.xcscheme</key>
+		<key>AMAttributedHighlightLabelExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>71F410B916971CF1007FBC25</key>
+		<key>71CF264216A2D09700A3231C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

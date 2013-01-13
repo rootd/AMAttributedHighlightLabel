@@ -1,22 +1,22 @@
-UIAttributedHighlightLabel
+AMAttributedHighlightLabel
 ==========================
 
 A UILabel subclass with mention/hashtag/link highlighting.
 
-![UIAttributedHighlightLabel screenshot](https://github.com/rootd/UIAttributedHighlightLabel/raw/master/screenshot.png "UIAttributedHighlightLabel screenshot")
+![AMAttributedHighlightLabel screenshot](https://github.com/rootd/AMAttributedHighlightLabel/raw/master/screenshot.png "AMAttributedHighlightLabel screenshot")
 
 Usage
 =====
 
-Import UIAttributedHighlightLabel.h and UIAttributedHighlightLabel.m to your project. Also link it against the CoreText framework for iOS 5 support.
+Import AMAttributedHighlightLabel.m and AMAttributedHighlightLabel.h to your project. Also link it against the CoreText framework for iOS 5 support.
 IMPORTANT: iOS 5 support not tested yet!
 
-    UIAttributedHighlightLabel *tweetLabel = [[UIAttributedHighlightLabel alloc] initWithFrame:CGRectMake(..,..,..,..)];
+    AMAttributedHighlightLabel *tweetLabel = [[AMAttributedHighlightLabel alloc] initWithFrame:CGRectMake(..,..,..,..)];
     tweetLabel.delegate = self;
     tweetLabel.userInteractionEnabled = YES;
     tweetLabel.numberOfLines = 0;
     tweetLabel.lineBreakMode = NSLineBreakByCharWrapping;
-    [tweetLabel setString:@"This #is a @test for my #@new http://UIAttributedHighlightLabel.class"];
+    [tweetLabel setString:@"This #is a @test for my #@new http://AMAttributedHighlightLabel.class"];
     
     tweetLabel.textColor = [UIColor lightGrayColor];
     tweetLabel.mentionTextColor = [UIColor darkGrayColor];
@@ -28,13 +28,13 @@ IMPORTANT: iOS 5 support not tested yet!
 
     [self.view addSubview:tweetLabel];
     
-Delegate methods (Use <UIAttributedHighlightLabelDelegate> protocol):
+Delegate methods (Use <AMAttributedHighlightLabelDelegate> protocol):
 
 <code>-(void)selectedMention:(NSString *)string; <br>
  -(void)selectedHashtag:(NSString *)string; <br>
  -(void)selectedLink:(NSString *)string;</code>
 
-Look at the sample project ti see it more detailed.
+Look at the sample project to see it more detailed.
 
 License (MIT)
 =============

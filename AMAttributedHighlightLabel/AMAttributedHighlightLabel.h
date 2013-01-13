@@ -16,13 +16,13 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-@protocol UIAttributedHighlightLabelDelegate
+@protocol AMAttributedHighlightLabelDelegate
 - (void)selectedMention:(NSString *)string;
 - (void)selectedHashtag:(NSString *)string;
 - (void)selectedLink:(NSString *)string;
 @end
 
-@interface UIAttributedHighlightLabel : UILabel {
+@interface AMAttributedHighlightLabel : UILabel {
     NSMutableArray *touchableWords;
     NSMutableArray *touchableWordsRange;
     NSMutableArray *touchableLocations;
@@ -39,7 +39,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property(strong,nonatomic) UIColor *selectedHashtagTextColor;
 @property(strong,nonatomic) UIColor *selectedLinkTextColor;
 
-@property (nonatomic, weak) id <UIAttributedHighlightLabelDelegate> delegate;
+@property (nonatomic, weak) id <AMAttributedHighlightLabelDelegate> delegate;
 
 - (void)setString:(NSString *)string;
 

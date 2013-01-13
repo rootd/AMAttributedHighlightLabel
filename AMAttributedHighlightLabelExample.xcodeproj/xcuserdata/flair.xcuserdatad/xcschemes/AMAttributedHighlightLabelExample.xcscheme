@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71F410B916971CF1007FBC25"
-               BuildableName = "UIAttributedHighlightLabelExample.app"
-               BlueprintName = "UIAttributedHighlightLabelExample"
-               ReferencedContainer = "container:UIAttributedHighlightLabelExample.xcodeproj">
+               BlueprintIdentifier = "71CF264216A2D09700A3231C"
+               BuildableName = "AMAttributedHighlightLabelExample.app"
+               BlueprintName = "AMAttributedHighlightLabelExample"
+               ReferencedContainer = "container:AMAttributedHighlightLabelExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71F410B916971CF1007FBC25"
-            BuildableName = "UIAttributedHighlightLabelExample.app"
-            BlueprintName = "UIAttributedHighlightLabelExample"
-            ReferencedContainer = "container:UIAttributedHighlightLabelExample.xcodeproj">
+            BlueprintIdentifier = "71CF264216A2D09700A3231C"
+            BuildableName = "AMAttributedHighlightLabelExample.app"
+            BlueprintName = "AMAttributedHighlightLabelExample"
+            ReferencedContainer = "container:AMAttributedHighlightLabelExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71F410B916971CF1007FBC25"
-            BuildableName = "UIAttributedHighlightLabelExample.app"
-            BlueprintName = "UIAttributedHighlightLabelExample"
-            ReferencedContainer = "container:UIAttributedHighlightLabelExample.xcodeproj">
+            BlueprintIdentifier = "71CF264216A2D09700A3231C"
+            BuildableName = "AMAttributedHighlightLabelExample.app"
+            BlueprintName = "AMAttributedHighlightLabelExample"
+            ReferencedContainer = "container:AMAttributedHighlightLabelExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71F410B916971CF1007FBC25"
-            BuildableName = "UIAttributedHighlightLabelExample.app"
-            BlueprintName = "UIAttributedHighlightLabelExample"
-            ReferencedContainer = "container:UIAttributedHighlightLabelExample.xcodeproj">
+            BlueprintIdentifier = "71CF264216A2D09700A3231C"
+            BuildableName = "AMAttributedHighlightLabelExample.app"
+            BlueprintName = "AMAttributedHighlightLabelExample"
+            ReferencedContainer = "container:AMAttributedHighlightLabelExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

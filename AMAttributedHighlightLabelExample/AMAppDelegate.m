@@ -1,22 +1,22 @@
 //
-//  AppDelegate.m
-//  UIAttributedHighlightLabelExample
+//  AMAppDelegate.m
+//  AMAttributedHighlightLabelExample
 //
-//  Created by Alexander Meiler on 04.01.13.
+//  Created by Alexander Meiler on 13.01.13.
 //  Copyright (c) 2013 Alexander Meiler. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "AMAppDelegate.h"
 
-#import "ViewController.h"
+#import "AMViewController.h"
 
-@implementation AppDelegate
+@implementation AMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[AMViewController alloc] initWithNibName:@"AMViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

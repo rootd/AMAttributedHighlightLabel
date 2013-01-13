@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71CF264816A2D09700A3231C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF264716A2D09700A3231C /* UIKit.framework */; };
+		71CF264A16A2D09700A3231C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF264916A2D09700A3231C /* Foundation.framework */; };
+		71CF264C16A2D09700A3231C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF264B16A2D09700A3231C /* CoreGraphics.framework */; };
+		71CF265216A2D09700A3231C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71CF265016A2D09700A3231C /* InfoPlist.strings */; };
+		71CF265416A2D09700A3231C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF265316A2D09700A3231C /* main.m */; };
+		71CF265816A2D09700A3231C /* AMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF265716A2D09700A3231C /* AMAppDelegate.m */; };
+		71CF265A16A2D09700A3231C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF265916A2D09700A3231C /* Default.png */; };
+		71CF265C16A2D09700A3231C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF265B16A2D09700A3231C /* Default@2x.png */; };
+		71CF265E16A2D09700A3231C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF265D16A2D09700A3231C /* Default-568h@2x.png */; };
+		71CF266116A2D09700A3231C /* AMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF266016A2D09700A3231C /* AMViewController.m */; };
+		71CF266416A2D09700A3231C /* AMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CF266216A2D09700A3231C /* AMViewController.xib */; };
+		71CF266F16A2D15300A3231C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF266E16A2D15300A3231C /* CoreText.framework */; };
+		71CF267816A2D22700A3231C /* AMAttributedHighlightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CF267716A2D22700A3231C /* AMAttributedHighlightLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		71CF264316A2D09700A3231C /* AMAttributedHighlightLabelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMAttributedHighlightLabelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CF264716A2D09700A3231C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		71CF264916A2D09700A3231C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		71CF264B16A2D09700A3231C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		71CF264F16A2D09700A3231C /* AMAttributedHighlightLabelExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AMAttributedHighlightLabelExample-Info.plist"; sourceTree = "<group>"; };
+		71CF265116A2D09700A3231C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71CF265316A2D09700A3231C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71CF265516A2D09700A3231C /* AMAttributedHighlightLabelExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMAttributedHighlightLabelExample-Prefix.pch"; sourceTree = "<group>"; };
+		71CF265616A2D09700A3231C /* AMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAppDelegate.h; sourceTree = "<group>"; };
+		71CF265716A2D09700A3231C /* AMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAppDelegate.m; sourceTree = "<group>"; };
+		71CF265916A2D09700A3231C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		71CF265B16A2D09700A3231C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		71CF265D16A2D09700A3231C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		71CF265F16A2D09700A3231C /* AMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMViewController.h; sourceTree = "<group>"; };
+		71CF266016A2D09700A3231C /* AMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMViewController.m; sourceTree = "<group>"; };
+		71CF266316A2D09700A3231C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AMViewController.xib; sourceTree = "<group>"; };
+		71CF266E16A2D15300A3231C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		71CF267616A2D22700A3231C /* AMAttributedHighlightLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAttributedHighlightLabel.h; sourceTree = "<group>"; };
+		71CF267716A2D22700A3231C /* AMAttributedHighlightLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAttributedHighlightLabel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71CF264016A2D09700A3231C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CF266F16A2D15300A3231C /* CoreText.framework in Frameworks */,
+				71CF264816A2D09700A3231C /* UIKit.framework in Frameworks */,
+				71CF264A16A2D09700A3231C /* Foundation.framework in Frameworks */,
+				71CF264C16A2D09700A3231C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71CF263816A2D09700A3231C = {
+			isa = PBXGroup;
+			children = (
+				71CF266E16A2D15300A3231C /* CoreText.framework */,
+				71CF264D16A2D09700A3231C /* AMAttributedHighlightLabelExample */,
+				71CF264616A2D09700A3231C /* Frameworks */,
+				71CF264416A2D09700A3231C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71CF264416A2D09700A3231C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71CF264316A2D09700A3231C /* AMAttributedHighlightLabelExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71CF264616A2D09700A3231C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71CF264716A2D09700A3231C /* UIKit.framework */,
+				71CF264916A2D09700A3231C /* Foundation.framework */,
+				71CF264B16A2D09700A3231C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71CF264D16A2D09700A3231C /* AMAttributedHighlightLabelExample */ = {
+			isa = PBXGroup;
+			children = (
+				71CF267516A2D22700A3231C /* AMAttributedHighlightLabel */,
+				71CF265616A2D09700A3231C /* AMAppDelegate.h */,
+				71CF265716A2D09700A3231C /* AMAppDelegate.m */,
+				71CF265F16A2D09700A3231C /* AMViewController.h */,
+				71CF266016A2D09700A3231C /* AMViewController.m */,
+				71CF266216A2D09700A3231C /* AMViewController.xib */,
+				71CF264E16A2D09700A3231C /* Supporting Files */,
+			);
+			path = AMAttributedHighlightLabelExample;
+			sourceTree = "<group>";
+		};
+		71CF264E16A2D09700A3231C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71CF264F16A2D09700A3231C /* AMAttributedHighlightLabelExample-Info.plist */,
+				71CF265016A2D09700A3231C /* InfoPlist.strings */,
+				71CF265316A2D09700A3231C /* main.m */,
+				71CF265516A2D09700A3231C /* AMAttributedHighlightLabelExample-Prefix.pch */,
+				71CF265916A2D09700A3231C /* Default.png */,
+				71CF265B16A2D09700A3231C /* Default@2x.png */,
+				71CF265D16A2D09700A3231C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71CF267516A2D22700A3231C /* AMAttributedHighlightLabel */ = {
+			isa = PBXGroup;
+			children = (
+				71CF267616A2D22700A3231C /* AMAttributedHighlightLabel.h */,
+				71CF267716A2D22700A3231C /* AMAttributedHighlightLabel.m */,
+			);
+			path = AMAttributedHighlightLabel;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71CF264216A2D09700A3231C /* AMAttributedHighlightLabelExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71CF266716A2D09700A3231C /* Build configuration list for PBXNativeTarget "AMAttributedHighlightLabelExample" */;
+			buildPhases = (
+				71CF263F16A2D09700A3231C /* Sources */,
+				71CF264016A2D09700A3231C /* Frameworks */,
+				71CF264116A2D09700A3231C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMAttributedHighlightLabelExample;
+			productName = AMAttributedHighlightLabelExample;
+			productReference = 71CF264316A2D09700A3231C /* AMAttributedHighlightLabelExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71CF263A16A2D09700A3231C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AM;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Alexander Meiler";
+			};
+			buildConfigurationList = 71CF263D16A2D09700A3231C /* Build configuration list for PBXProject "AMAttributedHighlightLabelExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 71CF263816A2D09700A3231C;
+			productRefGroup = 71CF264416A2D09700A3231C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71CF264216A2D09700A3231C /* AMAttributedHighlightLabelExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71CF264116A2D09700A3231C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CF265216A2D09700A3231C /* InfoPlist.strings in Resources */,
+				71CF265A16A2D09700A3231C /* Default.png in Resources */,
+				71CF265C16A2D09700A3231C /* Default@2x.png in Resources */,
+				71CF265E16A2D09700A3231C /* Default-568h@2x.png in Resources */,
+				71CF266416A2D09700A3231C /* AMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71CF263F16A2D09700A3231C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CF265416A2D09700A3231C /* main.m in Sources */,
+				71CF265816A2D09700A3231C /* AMAppDelegate.m in Sources */,
+				71CF266116A2D09700A3231C /* AMViewController.m in Sources */,
+				71CF267816A2D22700A3231C /* AMAttributedHighlightLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		71CF265016A2D09700A3231C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71CF265116A2D09700A3231C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		71CF266216A2D09700A3231C /* AMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71CF266316A2D09700A3231C /* en */,
+			);
+			name = AMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71CF266516A2D09700A3231C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		71CF266616A2D09700A3231C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71CF266816A2D09700A3231C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMAttributedHighlightLabelExample/AMAttributedHighlightLabelExample-Prefix.pch";
+				INFOPLIST_FILE = "AMAttributedHighlightLabelExample/AMAttributedHighlightLabelExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		71CF266916A2D09700A3231C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMAttributedHighlightLabelExample/AMAttributedHighlightLabelExample-Prefix.pch";
+				INFOPLIST_FILE = "AMAttributedHighlightLabelExample/AMAttributedHighlightLabelExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71CF263D16A2D09700A3231C /* Build configuration list for PBXProject "AMAttributedHighlightLabelExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71CF266516A2D09700A3231C /* Debug */,
+				71CF266616A2D09700A3231C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71CF266716A2D09700A3231C /* Build configuration list for PBXNativeTarget "AMAttributedHighlightLabelExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71CF266816A2D09700A3231C /* Debug */,
+				71CF266916A2D09700A3231C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71CF263A16A2D09700A3231C /* Project object */;
+}

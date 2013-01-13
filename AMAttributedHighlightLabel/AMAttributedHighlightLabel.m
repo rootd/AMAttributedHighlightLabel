@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Alexander Meiler. All rights reserved.
 //
 
-#import "UIAttributedHighlightLabel.h"
+#import "AMAttributedHighlightLabel.h"
 
-@implementation UIAttributedHighlightLabel
+@implementation AMAttributedHighlightLabel
 
 @synthesize textColor,mentionTextColor,hashtagTextColor,linkTextColor,selectedMentionTextColor,selectedHashtagTextColor,selectedLinkTextColor;
 @synthesize delegate;
@@ -35,7 +35,8 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Initialization code
@@ -56,7 +57,8 @@
     return self;
 }
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     if (self) {
         // Initialization code
@@ -77,7 +79,8 @@
     return self;
 }
 
-- (void)setString:(NSString *)string {
+- (void)setString:(NSString *)string
+{
     [touchableWords removeAllObjects];
     [touchableWordsRange removeAllObjects];
     [touchableLocations removeAllObjects];
@@ -95,25 +98,32 @@
         NSTextCheckingResult *match = [regex firstMatchInString:word options:0 range:NSMakeRange(0, [word length])];
         NSString *tappableWord = [word substringWithRange:match.range];
         
-        if (![tappableWord isEqualToString:@""]) {
+        if (![tappableWord isEqualToString:@""])
+        {
             NSRange matchRange = [string rangeOfString:tappableWord];
-            if ([tappableWord hasPrefix:@"@"]) {
+            if ([tappableWord hasPrefix:@"@"])
+            {
                 [attrString addAttribute:NSForegroundColorAttributeName value:mentionTextColor range:matchRange];
             }
-            else if ([tappableWord hasPrefix:@"#"]) {
+            else if ([tappableWord hasPrefix:@"#"])
+            {
                 [attrString addAttribute:NSForegroundColorAttributeName value:hashtagTextColor range:matchRange];
             }
-            else if ([tappableWord hasPrefix:@"http://"]) {
+            else if ([tappableWord hasPrefix:@"http://"])
+            {
                 [attrString addAttribute:NSForegroundColorAttributeName value:linkTextColor range:matchRange];
             }
-            else if ([tappableWord hasPrefix:@"https://"]) {
+            else if ([tappableWord hasPrefix:@"https://"])
+            {
                 [attrString addAttribute:NSForegroundColorAttributeName value:linkTextColor range:matchRange];
             }
-            else if ([tappableWord hasPrefix:@"www."]) {
+            else if ([tappableWord hasPrefix:@"www."])
+            {
                 [attrString addAttribute:NSForegroundColorAttributeName value:linkTextColor range:matchRange];
             }
             
-            for(int i = 0;i < matchRange.length;i++) {
+            for(int i = 0;i < matchRange.length;i++)
+            {
                 CGRect pos = [self rectForLetterAtIndex:matchRange.location + i];
                 [touchableWords addObject:tappableWord];
                 [touchableWordsRange addObject:[NSValue valueWithRange:matchRange]];
@@ -121,10 +131,13 @@
             }
         }
     }
-    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")) {
+    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0"))
+    {
         // iOS 6 supports attributed strings on UILabel
         self.attributedText = attrString;
-    } else {
+    }
+    else
+    {
         CGContextRef context = UIGraphicsGetCurrentContext();
 
         CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -148,7 +161,8 @@
 
 // Thank you, Erik Andersson!
 // https://gist.github.com/1278483
-- (CGRect)rectForLetterAtIndex:(NSUInteger)index {
+- (CGRect)rectForLetterAtIndex:(NSUInteger)index
+{
     NSAssert(self.lineBreakMode != NSLineBreakByClipping, @"UILabel.lineBreakMode cannot be NSLineBreakByClipping to calculate the rect of a character. You might think that it's possible, seeing as NSLineBreakByWordWrapping is supported, and they are almost the same. But the semantics are weird. Sorry.");
     NSAssert(self.lineBreakMode != NSLineBreakByTruncatingHead, @"UILabel.lineBreakMode cannot be NSLineBreakByTruncatingHead to calculate the rect of a character. We can't have everything you know.");
     NSAssert(self.lineBreakMode != NSLineBreakByTruncatingMiddle, @"UILabel.lineBreakMode cannot be NSLineBreakByTruncatingMiddle to calculate the rect of a character. We can't have everything you know.");
@@ -291,12 +305,15 @@
     return CGRectMake(x, y, letterSize.width, letterSize.height);
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
     UITouch *touch = [[event allTouches] anyObject];
     CGPoint touchLocation = [touch locationInView:self];
     int count = [touchableLocations count];
-    for (int i=0; i < count; i++) {
-        if (CGRectContainsPoint([[touchableLocations objectAtIndex:i] CGRectValue], touchLocation)) {
+    for (int i=0; i < count; i++)
+    {
+        if (CGRectContainsPoint([[touchableLocations objectAtIndex:i] CGRectValue], touchLocation))
+        {
             NSMutableAttributedString *newAttrString = [self.attributedText mutableCopy];
             [newAttrString removeAttribute:NSForegroundColorAttributeName range:[[touchableWordsRange objectAtIndex:i] rangeValue]];
             NSString *string = [touchableWords objectAtIndex:i];
@@ -318,8 +335,10 @@
     }
 }
 
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    if(currentSelectedString != nil) {
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if(currentSelectedString != nil)
+    {
         NSMutableAttributedString *newAttrString = [self.attributedText mutableCopy];
         [newAttrString removeAttribute:NSForegroundColorAttributeName range:currentSelectedRange];
         if([currentSelectedString hasPrefix:@"@"])
@@ -341,22 +360,28 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    if(currentSelectedString != nil) {
+    if(currentSelectedString != nil)
+    {
         NSMutableAttributedString *newAttrString = [self.attributedText mutableCopy];
         [newAttrString removeAttribute:NSForegroundColorAttributeName range:currentSelectedRange];
-        if([currentSelectedString hasPrefix:@"@"]) {
+        if([currentSelectedString hasPrefix:@"@"])
+        {
             [newAttrString addAttribute:NSForegroundColorAttributeName value:mentionTextColor range:currentSelectedRange];
             [delegate selectedMention:currentSelectedString];
-        } else if ([currentSelectedString hasPrefix:@"#"]) {
+        } else if ([currentSelectedString hasPrefix:@"#"])
+        {
             [newAttrString addAttribute:NSForegroundColorAttributeName value:hashtagTextColor range:currentSelectedRange];
             [delegate selectedHashtag:currentSelectedString];
-        } else if ([currentSelectedString hasPrefix:@"http://"]) {
+        } else if ([currentSelectedString hasPrefix:@"http://"])
+        {
             [newAttrString addAttribute:NSForegroundColorAttributeName value:linkTextColor range:currentSelectedRange];
             [delegate selectedLink:currentSelectedString];
-        } else if ([currentSelectedString hasPrefix:@"https://"]) {
+        } else if ([currentSelectedString hasPrefix:@"https://"])
+        {
             [newAttrString addAttribute:NSForegroundColorAttributeName value:linkTextColor range:currentSelectedRange];
             [delegate selectedLink:currentSelectedString];
-        } else if ([currentSelectedString hasPrefix:@"www."]) {
+        } else if ([currentSelectedString hasPrefix:@"www."])
+        {
             [newAttrString addAttribute:NSForegroundColorAttributeName value:linkTextColor range:currentSelectedRange];
             [delegate selectedLink:currentSelectedString];
         }
