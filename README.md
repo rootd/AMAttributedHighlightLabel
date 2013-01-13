@@ -3,7 +3,7 @@ AMAttributedHighlightLabel
 
 A UILabel subclass with mention/hashtag/link highlighting.
 
-![AMAttributedHighlightLabel screenshot](https://github.com/rootd/UIAttributedHighlightLabel/raw/master/screenshot.png "AMAttributedHighlightLabel screenshot")
+![AMAttributedHighlightLabel screenshot](https://github.com/rootd/AMAttributedHighlightLabel/raw/master/screenshot.png "AMAttributedHighlightLabel screenshot")
 
 Usage
 =====
