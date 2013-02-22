@@ -26,6 +26,11 @@ IMPORTANT: iOS 5 support not tested yet!
     tweetLabel.selectedHashtagTextColor = [UIColor blackColor];
     tweetLabel.selectedLinkTextColor = UIColorFromRGB(0x4099FF);
 
+    NSError *error;
+    regex = [NSRegularExpression regularExpressionWithPattern:@"((@|#)([A-Z0-9a-z(é|ë|ê|è|à|â|ä|á|ù|ü|û|ú|ì|ï|î|í)_]+))|(http(s)?://([A-Z0-9a-z._-]*(/)?)*)" options:NSRegularExpressionCaseInsensitive error:&error];
+
+    tweetLabel.regex = regex;
+
     [self.view addSubview:tweetLabel];
     
 Delegate methods (Use <AMAttributedHighlightLabelDelegate> protocol):

@@ -38,6 +38,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property(strong,nonatomic) UIColor *selectedMentionTextColor;
 @property(strong,nonatomic) UIColor *selectedHashtagTextColor;
 @property(strong,nonatomic) UIColor *selectedLinkTextColor;
+@property(strong,nonatomic) NSRegularExpression *regex;
 
 @property (nonatomic, weak) id <AMAttributedHighlightLabelDelegate> delegate;
 
