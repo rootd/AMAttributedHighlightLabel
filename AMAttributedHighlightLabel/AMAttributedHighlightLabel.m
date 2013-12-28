@@ -10,7 +10,7 @@
 
 @implementation AMAttributedHighlightLabel
 
-@synthesize textColor,mentionTextColor,hashtagTextColor,linkTextColor,selectedMentionTextColor,selectedHashtagTextColor,selectedLinkTextColor,regex;
+@synthesize textColor,mentionTextColor,hashtagTextColor,linkTextColor,selectedMentionTextColor,selectedHashtagTextColor,selectedLinkTextColor;
 @synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
@@ -26,9 +26,6 @@
         selectedMentionTextColor = [UIColor blackColor];
         selectedHashtagTextColor = [UIColor blackColor];
         selectedLinkTextColor = UIColorFromRGB(0x4099FF);
-        
-        NSError *error;
-        regex = [NSRegularExpression regularExpressionWithPattern:@"((@|#)([A-Z0-9a-z(é|ë|ê|è|à|â|ä|á|ù|ü|û|ú|ì|ï|î|í)_]+))|(http(s)?://([A-Z0-9a-z._-]*(/)?)*)" options:NSRegularExpressionCaseInsensitive error:&error];
         
         touchableWords = [[NSMutableArray alloc] init];
         touchableLocations = [[NSMutableArray alloc] init];
@@ -52,9 +49,6 @@
         selectedHashtagTextColor = [UIColor blackColor];
         selectedLinkTextColor = UIColorFromRGB(0x4099FF);
         
-        NSError *error;
-        regex = [NSRegularExpression regularExpressionWithPattern:@"((@|#)([A-Z0-9a-z(é|ë|ê|è|à|â|ä|á|ù|ü|û|ú|ì|ï|î|í)_]+))|(http(s)?://([A-Z0-9a-z._-]*(/)?)*)" options:NSRegularExpressionCaseInsensitive error:&error];
-        
         touchableWords = [[NSMutableArray alloc] init];
         touchableLocations = [[NSMutableArray alloc] init];
         touchableWordsRange = [[NSMutableArray alloc] init];
@@ -77,9 +71,6 @@
         selectedHashtagTextColor = [UIColor blackColor];
         selectedLinkTextColor = UIColorFromRGB(0x4099FF);
         
-        NSError *error;
-        regex = [NSRegularExpression regularExpressionWithPattern:@"((@|#)([A-Z0-9a-z(é|ë|ê|è|à|â|ä|á|ù|ü|û|ú|ì|ï|î|í)_]+))|(http(s)?://([A-Z0-9a-z._-]*(/)?)*)" options:NSRegularExpressionCaseInsensitive error:&error];
-        
         touchableWords = [[NSMutableArray alloc] init];
         touchableLocations = [[NSMutableArray alloc] init];
         touchableWordsRange = [[NSMutableArray alloc] init];
@@ -97,17 +88,21 @@
     
     self.text = string;
     NSArray *words = [string componentsSeparatedByString:@" "];
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"((@|#)([A-Z0-9a-z(é|ë|ê|è|à|â|ä|á|ù|ü|û|ú|ì|ï|î|í)_]+))|(http(s)?://([A-Z0-9a-z._-]*(/)?)*)" options:NSRegularExpressionCaseInsensitive error:&error];
     
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
     [attrString addAttribute:NSForegroundColorAttributeName value:textColor range:[string rangeOfString:string]];
     
+    NSUInteger startLocation = 0;
     for (NSString *word in words) {
+        NSRange wordSearchRange = NSMakeRange(startLocation, ([string length] - startLocation));
+        
         NSTextCheckingResult *match = [regex firstMatchInString:word options:0 range:NSMakeRange(0, [word length])];
         NSString *tappableWord = [word substringWithRange:match.range];
-        
-        if (![tappableWord isEqualToString:@""])
+        if ([tappableWord length] > 0)
         {
-            NSRange matchRange = [string rangeOfString:tappableWord];
+            NSRange matchRange = [string rangeOfString:word options:NSLiteralSearch range:wordSearchRange];
             if ([tappableWord hasPrefix:@"@"])
             {
                 [attrString addAttribute:NSForegroundColorAttributeName value:mentionTextColor range:matchRange];
@@ -137,6 +132,8 @@
                 [touchableLocations addObject:[NSValue valueWithCGRect:pos]];
             }
         }
+        
+        startLocation += [word length];
     }
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0"))
     {
