@@ -10,7 +10,7 @@
 
 @implementation AMAttributedHighlightLabel
 
-@synthesize textColor,mentionTextColor,hashtagTextColor,linkTextColor,selectedMentionTextColor,selectedHashtagTextColor,selectedLinkTextColor;
+@synthesize textColor,mentionTextColor,hashtagTextColor,linkTextColor,selectedMentionTextColor,selectedHashtagTextColor,selectedLinkTextColor,hashtagFont;
 @synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
@@ -110,6 +110,10 @@
             else if ([tappableWord hasPrefix:@"#"])
             {
                 [attrString addAttribute:NSForegroundColorAttributeName value:hashtagTextColor range:matchRange];
+                if (hashtagFont)
+                {
+                    [attrString addAttribute:NSFontAttributeName value: hashtagFont range:matchRange];
+                }
             }
             else if ([tappableWord hasPrefix:@"http://"])
             {
