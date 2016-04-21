@@ -21,6 +21,7 @@ IMPORTANT: iOS 5 support not tested yet!
     tweetLabel.textColor = [UIColor lightGrayColor];
     tweetLabel.mentionTextColor = [UIColor darkGrayColor];
     tweetLabel.hashtagTextColor = [UIColor darkGrayColor];
+    tweetLabel.hashtagTextColor = [UIFont boldSystemFontOfSize: [UIFont systemFontSize]];
     tweetLabel.linkTextColor = [UIColor colorWithRed:129.0/255.0 green:171.0/255.0 blue:193.0/255.0 alpha:1.0];
     tweetLabel.selectedMentionTextColor = [UIColor blackColor];
     tweetLabel.selectedHashtagTextColor = [UIColor blackColor];

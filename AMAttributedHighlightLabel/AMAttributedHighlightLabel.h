@@ -34,6 +34,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property(strong,nonatomic) UIColor *textColor;
 @property(strong,nonatomic) UIColor *mentionTextColor;
 @property(strong,nonatomic) UIColor *hashtagTextColor;
+@property(strong,nonatomic) UIFont *hashtagFont;
 @property(strong,nonatomic) UIColor *linkTextColor;
 @property(strong,nonatomic) UIColor *selectedMentionTextColor;
 @property(strong,nonatomic) UIColor *selectedHashtagTextColor;
